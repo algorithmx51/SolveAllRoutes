@@ -519,8 +519,7 @@ int main(void)
 
                     if(solutions) {
                         for(int i = 0; i < solutions->howManyPaths; i++) {
-                            for(int j = 0; j < solutions->paths[i]->length; j++)
-                                free(solutions->paths[i]->steps);
+                            free(solutions->paths[i]->steps);
                             free(solutions->paths[i]);
                         }
                         free(solutions->paths);
